@@ -1,0 +1,25 @@
+{
+  "name": "ultimate-timetable-utility",
+  "version": "1.0.0",
+  "description": "A modern, clean timetable utility",
+  "main": "server.js",
+  "scripts": {
+    "pretest": "eslint app.js",
+    "test": "jest",
+	"start": "node server.js"
+  },
+  "author": "",
+  "license": "GNU GPLv3",
+  "dependencies": {
+    "bcrypt": "^3.0.6",
+    "express": "^4.16.4",
+    "jsonwebtoken": "^8.5.1",
+    "node-fetch": "^2.3.0",
+    "uuid": "^3.3.2"
+  },
+  "devDependencies": {
+    "eslint": "^5.16.0",
+    "jest": "^24.7.1",
+	"supertest": "^4.0.2"
+  }
+}

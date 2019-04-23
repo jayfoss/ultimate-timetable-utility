@@ -1,0 +1,11 @@
+html, body {
+	min-height:100vh;
+}
+
+#content, #home {
+	min-height:calc(100vh - 56px);
+}
+
+#show-password, .list-item {
+	cursor:pointer;
+}
