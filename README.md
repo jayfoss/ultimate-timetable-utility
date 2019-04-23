@@ -371,7 +371,7 @@ A successful delete should return a `204 No Content` HTTP header
 ------------------
 
 ## Client
-The client is a single page site that uses JavaScript requests to load pages.
+The client is a single page site that uses JavaScript requests to load pages. It works best in Chrome!
 - To get Started, navigate to the Register page to create your account.
 - Once your account has been successfully created, you will be navigated to the login page.
 - Login to the app and you will be presented with the task list screen and an option to create a task.
