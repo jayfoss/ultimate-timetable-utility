@@ -86,10 +86,10 @@ A validation error will contain additional information about the fields that fai
 		]
 	}
 	
-###Users
+### Users
 Use this endpoint to register a new account. Additionally, users with `level: "admin"` may use this endpoint to list users.
 
-####The User Object
+#### The User Object
 Users contain the following fields:
 
 - `id`: a `String` representing the user's ID
@@ -98,7 +98,7 @@ Users contain the following fields:
 - `lastName`: a `String` between 1 and 50 characters
 - `access`: a `String` containing either the value `user` or `admin`
 
-####List all users (admin only)
+#### List all users (admin only)
 
 	GET /api/v1/users
 	
@@ -121,7 +121,7 @@ Example response body:
 		}
 	]
 	
-####Create a user
+#### Create a user
 
 	POST /api/v1/users
 	
@@ -144,10 +144,10 @@ Example response body:
 		"access": "user"
 	}
 	
-###Tasks
+### Tasks
 Use this endpoint to list, create, read, update and delete tasks
 
-####The Task Object
+#### The Task Object
 Tasks contain the following fields:
 
 - `id`: a `String` representing the task's ID
@@ -158,7 +158,7 @@ Tasks contain the following fields:
 - `timeEnd`: a `String` denoting a datetime in the `Y-m-d H:i:s` format
 - `places`: an `Array` containing a list of places attached to this task (readonly and only available through GET on the individual task) 
 
-####List all of your tasks (or all tasks if user is admin)
+#### List all of your tasks (or all tasks if user is admin)
 
 	GET /api/v1/tasks
 	
@@ -183,7 +183,7 @@ Example response body:
 		}
 	]
 	
-####Create a task
+#### Create a task
 
 	POST /api/v1/tasks
 	
@@ -207,7 +207,7 @@ Example response body:
 		"timeEnd": "2019-01-01 00:00:00"
 	}
 	
-####Read a task
+#### Read a task
 
 	GET /api/v1/tasks/:id
 	
@@ -225,7 +225,7 @@ Example response body:
 	
 A GET request for a specific task will include an array of associated places
 
-####Update a task
+#### Update a task
 
 	PATCH /api/v1/tasks/:id
 	
@@ -246,16 +246,16 @@ Example response body:
 		"timeEnd": "2019-01-01 00:00:00"
 	}
 	
-####Delete a task
+#### Delete a task
 
 	DELETE /api/v1/tasks/:id
 	
 A successful delete should return a `204 No Content` HTTP header
 
-###Places
+### Places
 Use this endpoint to list, create, read, update and delete places
 
-####The Place Object
+#### The Place Object
 Places contain the following fields:
 
 - `id`: a `String` representing the task's ID
@@ -268,7 +268,7 @@ Places contain the following fields:
 - `country`: a `String` between 2 and 75 characters
 - `taskId`: a `String` representing the ID of the task to which this place is attached
 
-####List all of your places (or all places if user is admin)
+#### List all of your places (or all places if user is admin)
 
 	GET /api/v1/places
 	
@@ -288,7 +288,7 @@ Example response body:
 		}
 	]
 	
-####Create a place
+#### Create a place
 
 	POST /api/v1/places
 	
@@ -318,7 +318,7 @@ Example response body:
 		"taskId": "50c83899-3597-4742-a9b1-77f16995e7a6"
 	}
 
-####Read a place
+#### Read a place
 
 	GET /api/v1/places/:id
 	
@@ -337,7 +337,7 @@ Example response body:
 	}
 
 
-####Update a place
+#### Update a place
 
 	PATCH /api/v1/places/:id
 	
@@ -362,7 +362,7 @@ Example response body:
 		"taskId": "50c83899-3597-4742-a9b1-77f16995e7a6"
 	}
 	
-####Delete a task
+#### Delete a task
 
 	DELETE /api/v1/tasks/:id
 	
@@ -370,7 +370,7 @@ A successful delete should return a `204 No Content` HTTP header
 
 ------------------
 
-##Client
+## Client
 The client is a single page site that uses JavaScript requests to load pages.
 - To get Started, navigate to the Register page to create your account.
 - Once your account has been successfully created, you will be navigated to the login page.
